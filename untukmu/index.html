@@ -36,8 +36,9 @@
   width: 100%;
   height: 100%;
   object-fit: cover; /* Memastikan gambar menutupi seluruh layar tanpa distorsi */
-  opacity: 0;
-  transition: all .7s ease;
+  opacity: 1; /* DIUBAH: Gambar langsung muncul penuh */
+  visibility: visible; /* DITAMBAHKAN: Memastikan elemen terlihat */
+  transition: opacity .7s ease, transform 1s ease; /* Transisi diperhalus */
 }
 
 /* --- Tampilan untuk MODE HP (Portrait) --- */
@@ -52,7 +53,7 @@
 /* Media query ini aktif jika lebar layar lebih besar atau sama dengan tingginya */
 @media screen and (orientation: landscape) {
   #wallpaper {
-    content: url('https://raw.githubusercontent.com/Dari-Sarif/dari-sarif.github.io/refs/heads/main/untukmu/wowe-desktop.png'); /* GANTI DENGAN URL GAMBAR DESKTOP ANDA */
+    content: url('https://raw.githubusercontent.com/Dari-Sarif/dari-sarif.github.io/refs/heads/main/untukmu/wowe-desktop.png'); /* URL Gambar Desktop */
   }
 }
 
@@ -120,7 +121,7 @@
     ket.style="display:none";
     setTimeout(mulaikonten,500);
 }
-  function mulaikonten() {otomatis();suratin.style="display:none";Content.style = "opacity:1;margin-top:10vh";bodyblur.style="opacity:.6;";wallpaper.style="transform: scale(1);opacity:1;";fotoakhir.style="display:inline-flex;";setTimeout(ftmuncul,200);bq.style = "position:relative;opacity:1;visibility:visible;transform: scale(1);border-radius:var(--bingkai);margin-top:0";fungsi=1;setTimeout(tombol,500);}
+  function mulaikonten() {otomatis();suratin.style="display:none";Content.style = "opacity:1;margin-top:10vh";bodyblur.style="opacity:.6;";/*wallpaper.style="transform: scale(1);opacity:1;";*/fotoakhir.style="display:inline-flex;";setTimeout(ftmuncul,200);bq.style = "position:relative;opacity:1;visibility:visible;transform: scale(1);border-radius:var(--bingkai);margin-top:0";fungsi=1;setTimeout(tombol,500);}
   function tunjukkan(){}
 function hilangkan() {}
   function ftmuncul(){
